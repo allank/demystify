@@ -16,15 +16,33 @@ Lessons live in `lessons/`, one file per lesson, titled `0001-dash-case-name.md`
 ```
 
 **Further reading**: [{Title}]({url})
+
+{New terms here are explained in the glossary.}
 ````
+
+The glossary-pointer line is optional — include it only when the lesson actually introduces new terms.
 
 A lesson may also include, wherever the content calls for it:
 
 ````md
 ```panel:info
-{A callout the reader shouldn't miss, or a caveat/aside}
+{A tangential aside or supporting context}
 ```
 ````
+
+````md
+```panel:note
+{A worked example}
+```
+````
+
+````md
+```panel:warning
+{A caveat, or a flagged inconsistency in a cited source}
+```
+````
+
+Pick the panel type by what the callout is actually doing, not by habit — an aside, a worked example, and a caveat are different enough in function that the reader benefits from the distinction.
 
 ````md
 ```mermaid
@@ -39,6 +57,7 @@ A lesson may also include, wherever the content calls for it:
 - **Self-test format is fixed**: the fenced block's title *is* the question, its body *is* the answer — free-recall retrieval practice, not multiple choice. Confluence's Expand macro is a plain disclosure container, not a quiz widget, so there's no scoring and no options to bias.
 - **Cite inline.** Wherever a claim is backed by an entry in `SOURCES.md`, link it directly in the body: `[claim](url)`. Don't push citations to a separate footnote section.
 - **One further-reading link per lesson**, pulled from `SOURCES.md`, at the end.
+- **A glossary-pointer line is optional**, at the end — plain text, not a link (the glossary can't be clickable-linked to from a lesson; see `GLOSSARY-FORMAT.md`). Include it only when the lesson introduces new terms.
 - **No inter-lesson navigation.** Don't author prev/next links to other lesson files — the published pages are separate Confluence pages with their own URLs, unknown until the expert actually creates them there. Confluence's native page hierarchy and breadcrumbs solve sequential navigation for free once the pages are organized; hand-authored relative links would need re-targeting after every single publish.
 - **Voice**: general expository prose. Second-person "you" is fine — normal for explainer writing. Never write anything implying a live conversation with an agent: no "as we discussed," no "ask a follow-up," no reference to the authoring process.
 - **Nothing else in the file.** No frontmatter, no workflow metadata — a lesson file is exactly what gets pasted into Confluence.
